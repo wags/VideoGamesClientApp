@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +13,12 @@ export class AppComponent {
     { title: 'Super Mario 64' },
     { title: 'Resident Evil' }
   ];
+
+  constructor(private http: Http) { }
+
+  loadVideoGames() {
+    this.http.get('http://localhost:5000/api/videogames')
+      .map((res: Response) => res.json())
+      .subscribe(data => console.log(data));
+  }
 }
