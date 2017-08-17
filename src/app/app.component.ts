@@ -9,16 +9,16 @@ import 'rxjs/add/operator/map';
 })
 export class AppComponent {
   title = 'app works updated!';
-  videoGames = [
-    { title: 'Super Mario 64' },
-    { title: 'Resident Evil' }
-  ];
+  videoGames = [];
 
   constructor(private http: Http) { }
 
   loadVideoGames() {
     this.http.get('http://localhost:5000/api/videogames')
       .map((res: Response) => res.json())
-      .subscribe(data => console.log(data));
+      .subscribe(data => {
+        console.log(data);
+        this.videoGames = data;
+      });
   }
 }
