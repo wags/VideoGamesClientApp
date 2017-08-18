@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VideoGamesComponent } from './video-games/video-games.component';
 import { VideoGameAddComponent } from './video-game-add/video-game-add.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VideoGamesComponent,
-    VideoGameAddComponent
+    VideoGameAddComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
