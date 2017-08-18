@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
+import { Router } from '@angular/router';
 
 class VideoGame {
   id: number;
@@ -16,7 +17,7 @@ class VideoGame {
 export class VideoGameAddComponent implements OnInit {
   model: VideoGame;
 
-  constructor(private http: Http) { }
+  constructor(private http: Http, private router: Router) { }
 
   ngOnInit() {
     this.model = new VideoGame();
@@ -25,7 +26,7 @@ export class VideoGameAddComponent implements OnInit {
   onSubmit() {
     this.http.post('http://localhost:5000/api/videogames', this.model)
       .subscribe(() => {
-        console.log('Added video game!');
+        this.router.navigate(['/videogames']);
       });
   }
 
