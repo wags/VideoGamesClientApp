@@ -2,14 +2,10 @@
   {{title}}
 </h1>
 
-<h2>
-  ASP.NET Core is super cool :)
-</h2>
-
-<ul>
-  <li *ngFor="let videoGame of videoGames">
-    Title: {{videoGame.title}}
-  </li>
-</ul>
-
-<button (click)="loadVideoGames()">Get Video Games</button>
+<div>
+  <div *ngFor="let videoGame of videoGames">
+    <h2>{{videoGame.title}} ({{videoGame.platform}})</h2>
+    <h5>Published On: {{videoGame.publishedOn | date}}</h5>
+    <hr>
+  </div>
+</div>
