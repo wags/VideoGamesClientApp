@@ -24,11 +24,11 @@ export class VideoGameAddComponent implements OnInit {
     this.model = new VideoGame();
 
     this.platforms = [
-      'Nintendo N64',
-      'Nintendo GameCube',
-      'Nintendo Wii',
-      'Nintendo Wii U',
-      'Nintendo Switch',
+      'N64',
+      'GameCube',
+      'Wii',
+      'Wii U',
+      'Switch',
       'PlayStation',
       'PlayStation 2',
       'PlayStation 3',
