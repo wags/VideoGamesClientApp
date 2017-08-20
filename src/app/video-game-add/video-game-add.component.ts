@@ -16,11 +16,27 @@ class VideoGame {
 })
 export class VideoGameAddComponent implements OnInit {
   model: VideoGame;
+  platforms: string[];
 
   constructor(private http: Http, private router: Router) { }
 
   ngOnInit() {
     this.model = new VideoGame();
+
+    this.platforms = [
+      'Nintendo N64',
+      'Nintendo GameCube',
+      'Nintendo Wii',
+      'Nintendo Wii U',
+      'Nintendo Switch',
+      'PlayStation',
+      'PlayStation 2',
+      'PlayStation 3',
+      'PlayStation 4',
+      'Xbox',
+      'Xbox 360',
+      'Xbox One'
+    ];
   }
 
   onSubmit() {
