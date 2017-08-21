@@ -7,7 +7,7 @@ class VideoGame {
   id: number;
   title: string;
   publishedOn: Date;
-  platform: string;
+  platformId: number;
 }
 
 class Platform {
