@@ -16,7 +16,7 @@
     <label for="platform">Platform:</label>
     <select id="platform" name="platform" [(ngModel)]="model.platform">
       <option value=""></option>
-      <option *ngFor="let platform of platforms" [value]="platform">{{platform}}</option>
+      <option *ngFor="let platform of platforms" [value]="platform.id">{{platform.name}}</option>
     </select>
   </div>
 
